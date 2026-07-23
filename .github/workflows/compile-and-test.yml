@@ -65,7 +65,7 @@ jobs:
           subject-path: 'dist/Electron Vite Monorepo Template*, dist/latest*.yml'
 
       - name: Upload compiled app
-        uses: actions/upload-artifact@v4
+        uses: actions/upload-artifact@v7
         with:
           name: ${{ matrix.os }}-${{inputs.distribution-channel}}
           path: dist
