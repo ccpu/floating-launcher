@@ -1,4 +1,4 @@
-# Floating Launcher for Windows
+# Floating Launcher
 
 Floating Launcher is a small Electron app that keeps a compact, always-on-top
 shortcut bar on screen. It lets you run saved launchers, add new ones, edit or
