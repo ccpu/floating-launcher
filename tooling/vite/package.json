@@ -1,0 +1,44 @@
+{
+  "name": "@internal/vite",
+  "type": "module",
+  "version": "0.0.0",
+  "private": true,
+  "packageManager": "pnpm@10.17.0",
+  "author": "",
+  "license": "MIT",
+  "exports": {
+    "./renderer": {
+      "types": "./renderer.d.ts",
+      "default": "./renderer.mjs"
+    },
+    "./preload": {
+      "types": "./preload.d.ts",
+      "default": "./preload.mjs"
+    },
+    "./types": "./renderer.d.ts"
+  },
+  "scripts": {
+    "clean:all": "git clean -xdf .cache .turbo dist node_modules",
+    "clean": "git clean -xdf .cache .turbo dist",
+    "test": "vitest --run --passWithNoTests",
+    "test:watch": "vitest --watch",
+    "test:ui": "vitest --ui",
+    "test:coverage": "vitest --coverage",
+    "typecheck": "tsc --noEmit --emitDeclarationOnly false",
+    "lint": "eslint",
+    "format": "prettier --check . --ignore-path ../../.gitignore --ignore-path ../../.prettierignore"
+  },
+  "devDependencies": {
+    "@internal/eslint-config": "workspace:*",
+    "@internal/prettier-config": "workspace:*",
+    "@internal/tsconfig": "workspace:*",
+    "@internal/vitest-config": "workspace:*",
+    "@tailwindcss/vite": "catalog:dev",
+    "@types/node": "catalog:dev",
+    "@vitejs/plugin-react": "catalog:dev",
+    "electron-vite-toolkit": "catalog:dev",
+    "eslint": "catalog:dev",
+    "typescript": "catalog:dev"
+  },
+  "prettier": "@internal/prettier-config"
+}

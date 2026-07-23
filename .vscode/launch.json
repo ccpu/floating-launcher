@@ -1,0 +1,17 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Debug Main Process with Hot Reload",
+      "skipFiles": ["<node_internals>/**"],
+      "runtimeExecutable": "${workspaceFolder}/node_modules/.bin/electron-vite-toolkit.cmd",
+      "runtimeArgs": ["start"],
+      "autoAttachChildProcesses": true,
+      "env": {
+        "NODE_ENV": "development"
+      }
+    }
+  ]
+}
