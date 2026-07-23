@@ -60,7 +60,7 @@ jobs:
       - run: xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm run test:e2e
         if: matrix.os == 'ubuntu-latest'
 
-      - uses: actions/attest-build-provenance@v3
+      - uses: actions/attest-build-provenance@v4
         with:
           subject-path: 'dist/Electron Vite Monorepo Template*, dist/latest*.yml'
 
